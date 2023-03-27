@@ -1,0 +1,69 @@
+<?php
+
+namespace App\Http\Controllers\API;
+
+use App\Http\Controllers\Controller;
+use App\Models\Rent;
+use Illuminate\Http\Request;
+
+class RentController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        $rents = Rent::all();
+        return response()->json($rents);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        $rent = new Rent();
+        $rent->fill($request->all());
+        $rent->save();
+        return response()->json($rent, 201);
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        $rent = Rent::find($id);
+        if (is_null($rent)) {
+            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+        }
+        return response()->json($rent);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        $rent = Rent::find($id);
+        if (is_null($rent)) {
+            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+        }
+        $rent->fill($request->all());
+        $rent->save();
+        return response()->json($rent);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        $rent = Rent::find($id);
+        if (is_null($rent)) {
+            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+        }
+        Rent::destroy($id);
+        return response()->noContent();
+    }
+}
