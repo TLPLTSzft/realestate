@@ -11,7 +11,7 @@ class UpdateRealestateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,14 @@ class UpdateRealestateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            $furnishing = ['bútor nélkül', 'alap felszerelés', 'teljesen bútorozott'],
+            'realestate_code' => 'string|unique:realestates,realestate_code|size:7',
+            'address' => 'string|max:100',
+            'room' => 'decimal:(2,1)',
+            'furnishing' => 'string|in: ' . implode(',', $furnishing),
+            'rental_fee' => 'integer|between:50,300|nullable',
+            'sale_price' => 'integer|between:10,100|nullable',
+            'description' => 'string|max:30|nullable',
         ];
     }
 }

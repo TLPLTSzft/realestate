@@ -11,7 +11,7 @@ class UpdateSaleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class UpdateSaleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'user_id' => 'integer|exists:users,id',
+            'realestate_id' => 'integer|unique:sales,realestate_id|exists:realestates,id',
+            'sale_date' => 'date|date_format:Y-m-d',
         ];
     }
 }

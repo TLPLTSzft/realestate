@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('rents', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->require;
-            // $table->foreignId('realestate_id')->constrained('realestates')->require;
-            $table->unsignedBigInteger('realestate_id')->unique()->require;
-            $table->foreign('realestate_id')->references('id')->on('realestates');
+            $table->foreignId('realestate_id')->unique()->constrained('realestates')->require;
+            // $table->unsignedBigInteger('realestate_id')->unique()->require;
+            // $table->foreign('realestate_id')->references('id')->on('realestates');
             $table->date('booking_date')->require;
             $table->date('start_date')->require;
             $table->date('end_date')->nullable();

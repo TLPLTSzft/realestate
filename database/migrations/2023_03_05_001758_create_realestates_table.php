@@ -16,9 +16,9 @@ return new class extends Migration
             $furnishing = ['bútor nélkül', 'alap felszerelés', 'teljesen bútorozott'];
 
             $table->id();
-            $table->string('realestate_code', 7)->require;
-            $table->string('address', 200)->require;
-            $table->double('room', 2, 1)->require;
+            $table->string('realestate_code', 7)->unique()->require;
+            $table->string('address', 100)->require;
+            $table->decimal('room', 2, 1)->require;
             $table->enum('furnishing', $furnishing)->require;
             $table->integer('rental_fee')->nullable();
             $table->integer('sale_price')->nullable();

@@ -3,9 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Realestate;
-use App\Models\Rent;
 use App\Models\User;
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreSaleRequest;
+use App\Http\Requests\UpdateSaleRequest;
 use App\Models\Sale;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,7 @@ class SaleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreSaleRequest $request)
     {
         $sale = new Sale();
         $sale->fill($request->all());
@@ -43,7 +45,7 @@ class SaleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateSaleRequest $request, string $id)
     {
         $sale = Sale::find($id);
         if (is_null($sale)) {

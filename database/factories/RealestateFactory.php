@@ -20,7 +20,7 @@ class RealestateFactory extends Factory
         $room = fake()->numberBetween(0, 5) + fake()->numberBetween(1, 2) * 0.5;
         $furnishing = ['bútor nélkül', 'alap felszerelés', 'teljesen bútorozott'];
         $rental_fee = fake()->numberBetween(50, 300);
-        $sale_price = fake()->numberBetween(5, 300);
+        $sale_price = fake()->numberBetween(10, 100);
         $rand = rand(0, 10);
         if ($rand < 3) {
             $rental_fee = null;
@@ -35,7 +35,7 @@ class RealestateFactory extends Factory
             'furnishing' => fake()->randomElement($furnishing),
             'rental_fee' => $rental_fee,
             'sale_price' => $sale_price,
-            'description' => fake()->realTextBetween(70, 100, 2)
+            'description' => fake()->realTextBetween(10, 30, 2)
         ];
     }
 }

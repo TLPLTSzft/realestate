@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreRentRequest;
+use App\Http\Requests\UpdateRentRequest;
 use App\Models\Rent;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,7 @@ class RentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRentRequest $request)
     {
         $rent = new Rent();
         $rent->fill($request->all());
@@ -43,7 +45,7 @@ class RentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateRentRequest $request, string $id)
     {
         $rent = Rent::find($id);
         if (is_null($rent)) {

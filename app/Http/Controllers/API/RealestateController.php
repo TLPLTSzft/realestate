@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreRealestateRequest;
+use App\Http\Requests\UpdateRealestateRequest;
 use App\Models\Realestate;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,7 @@ class RealestateController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRealestateRequest $request)
     {
         $realestate = new Realestate();
         $realestate->fill($request->all());
@@ -43,7 +45,7 @@ class RealestateController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateRealestateRequest $request, string $id)
     {
         $realestate = Realestate::find($id);
         if (is_null($realestate)) {
