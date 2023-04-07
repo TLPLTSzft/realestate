@@ -22,7 +22,7 @@ class StoreRealestateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            $furnishing = ['bútor nélkül', 'alap felszerelés', 'teljesen bútorozott'],
+            $furnishing = ['without furniture', 'basic equipment', 'fully furnished'],
             'realestate_code' => 'required|string|unique:realestates,realestate_code|size:7',
             'address' => 'required|string|max:100',
             'room' => 'required|decimal:(2,1)',

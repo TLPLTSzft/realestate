@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('realestates', function (Blueprint $table) {
 
-            $furnishing = ['bútor nélkül', 'alap felszerelés', 'teljesen bútorozott'];
+            $furnishing = ['without furniture', 'basic equipment', 'fully furnished'];
 
             $table->id();
             $table->string('realestate_code', 7)->unique()->require;

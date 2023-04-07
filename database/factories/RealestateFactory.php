@@ -18,7 +18,7 @@ class RealestateFactory extends Factory
     {
         $realestate_code = fake()->unique()->regexify('[A-Z]{3}-[0-9]{3}');
         $room = fake()->numberBetween(0, 5) + fake()->numberBetween(1, 2) * 0.5;
-        $furnishing = ['bútor nélkül', 'alap felszerelés', 'teljesen bútorozott'];
+        $furnishing = ['without furniture', 'basic equipment', 'fully furnished'];
         $rental_fee = fake()->numberBetween(50, 300);
         $sale_price = fake()->numberBetween(10, 100);
         $rand = rand(0, 10);
