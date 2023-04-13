@@ -4,9 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Realestate;
-use App\Models\Rent;
-use App\Models\Sale;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

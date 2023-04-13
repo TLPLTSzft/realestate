@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreRentRequest;
 use App\Http\Requests\UpdateRentRequest;
 use App\Models\Rent;
-use Illuminate\Http\Request;
 
 class RentController extends Controller
 {

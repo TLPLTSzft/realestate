@@ -27,8 +27,8 @@ class UpdateRealestateRequest extends FormRequest
             'address' => 'string|max:100',
             'room' => 'decimal:(2,1)',
             'furnishing' => 'string|in: ' . implode(',', $furnishing),
-            'rental_fee' => 'integer|between:50,300|nullable',
-            'sale_price' => 'integer|between:10,100|nullable',
+            'rental_fee' => 'integer|between:150,1500|nullable',
+            'sale_price' => 'integer|between:15,150|nullable',
             'description' => 'string|max:30|nullable',
         ];
     }
