@@ -22,11 +22,10 @@ class UpdateRealestateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            $furnishing = ['without furniture', 'basic equipment', 'fully furnished'],
             'realestate_code' => 'string|unique:realestates,realestate_code|size:7',
             'address' => 'string|max:100',
-            'room' => 'decimal:(2,1)',
-            'furnishing' => 'string|in: ' . implode(',', $furnishing),
+            'room' => 'decimal:(2,1)|between:0.5,6',
+            'furnishing' => 'integer|between:0,2',
             'rental_fee' => 'integer|between:150,1500|nullable',
             'sale_price' => 'integer|between:15,150|nullable',
             'description' => 'string|max:30|nullable',

@@ -13,13 +13,11 @@ return new class extends Migration
     {
         Schema::create('realestates', function (Blueprint $table) {
 
-            $furnishing = ['without furniture', 'basic equipment', 'fully furnished'];
-
             $table->id();
             $table->string('realestate_code', 7)->unique()->require;
             $table->string('address', 100)->require;
             $table->decimal('room', 2, 1)->require;
-            $table->enum('furnishing', $furnishing)->require;
+            $table->integer('furnishing')->require;
             $table->integer('rental_fee')->nullable();
             $table->integer('sale_price')->nullable();
             $table->text('description')->nullable();
