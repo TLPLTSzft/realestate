@@ -36,7 +36,7 @@ class RealestateController extends Controller
     {
         $realestate = Realestate::find($id);
         if (is_null($realestate)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         return response()->json($realestate);
     }
@@ -48,7 +48,7 @@ class RealestateController extends Controller
     {
         $realestate = Realestate::find($id);
         if (is_null($realestate)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         $realestate->fill($request->all());
         $realestate->save();
@@ -62,8 +62,10 @@ class RealestateController extends Controller
     {
         $realestate = Realestate::find($id);
         if (is_null($realestate)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
+            return response()->status();
         }
+
         Realestate::destroy($id);
         return response()->noContent();
     }

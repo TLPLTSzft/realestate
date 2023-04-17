@@ -22,7 +22,7 @@ class UpdateRealestateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'realestate_code' => 'string|unique:realestates,realestate_code|size:7',
+            'realestate_code' => 'string|size:7',
             'address' => 'string|max:100',
             'room' => 'decimal:(2,1)|between:0.5,6',
             'furnishing' => 'integer|between:0,2',

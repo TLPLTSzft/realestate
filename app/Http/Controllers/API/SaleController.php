@@ -36,7 +36,7 @@ class SaleController extends Controller
     {
         $sale = Sale::find($id);
         if (is_null($sale)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         return response()->json($sale);
     }
@@ -48,7 +48,7 @@ class SaleController extends Controller
     {
         $sale = Sale::find($id);
         if (is_null($sale)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         $sale->fill($request->all());
         $sale->save();
@@ -62,7 +62,7 @@ class SaleController extends Controller
     {
         $sale = Sale::find($id);
         if (is_null($sale)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         Sale::destroy($id);
         return response()->noContent();

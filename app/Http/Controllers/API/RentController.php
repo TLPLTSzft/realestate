@@ -36,7 +36,7 @@ class RentController extends Controller
     {
         $rent = Rent::find($id);
         if (is_null($rent)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         return response()->json($rent);
     }
@@ -48,7 +48,7 @@ class RentController extends Controller
     {
         $rent = Rent::find($id);
         if (is_null($rent)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         $rent->fill($request->all());
         $rent->save();
@@ -62,7 +62,7 @@ class RentController extends Controller
     {
         $rent = Rent::find($id);
         if (is_null($rent)) {
-            return response()->json(['message' => 'Ilyen azonosítóval nem található rekord'], 404);
+            return response()->json(['message' => 'Not Found'], 404);
         }
         Rent::destroy($id);
         return response()->noContent();
