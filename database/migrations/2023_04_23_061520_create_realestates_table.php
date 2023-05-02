@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('realestate_code', 7)->unique()->require;
             $table->string('address', 100)->require;
             $table->decimal('room', 2, 1)->require;
-            $table->integer('furnishing')->require;
+            $table->foreignId('furnishing_id')->constrained('furnishings')->require;
             $table->integer('rental_fee')->nullable();
             $table->integer('sale_price')->nullable();
             $table->text('description')->nullable();

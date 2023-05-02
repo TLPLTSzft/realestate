@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\RealestateController;
-use App\Http\Controllers\API\RentController;
+use App\Http\Controllers\API\RentalController;
 use App\Http\Controllers\API\SaleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/realestate', RealestateController::class);
-Route::apiResource('/rent', RentController::class);
-Route::apiResource('/sale', SaleController::class);
+Route::apiResource('/realestates', RealestateController::class);
+Route::apiResource('/rentals', RentalController::class);
+Route::apiResource('/sales', SaleController::class);

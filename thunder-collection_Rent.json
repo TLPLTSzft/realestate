@@ -1,0 +1,138 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Rent",
+    "dateExported": "2023-04-16T10:36:38.336Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "29068515-5704-4b6a-b206-c92f8b8e6b1b",
+            "colId": "3156c202-5643-45b3-b4f1-788f2972c4b8",
+            "containerId": "",
+            "name": "INDEX Rent",
+            "url": "http://localhost:8000/api/rent",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-03-27T10:21:09.758Z",
+            "modified": "2023-03-27T10:21:37.562Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e113af59-77bb-44d1-bfb1-565e0917d5b4",
+            "colId": "3156c202-5643-45b3-b4f1-788f2972c4b8",
+            "containerId": "",
+            "name": "STORE Rent",
+            "url": "http://localhost:8000/api/rent",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2023-03-27T10:21:09.759Z",
+            "modified": "2023-04-16T10:34:29.553Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 11,\n  \"realestate_id\": 20,\n  \"booking_date\": \"2023-03-03\",\n  \"start_date\": \"2023-03-04\",\n  \"end_date\": \"2023-03-05\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "830cbbcc-4457-4834-a31e-804b84205884",
+            "colId": "3156c202-5643-45b3-b4f1-788f2972c4b8",
+            "containerId": "",
+            "name": "SHOW Rent",
+            "url": "http://localhost:8000/api/rent/11",
+            "method": "GET",
+            "sortNum": 45000,
+            "created": "2023-03-27T10:21:09.760Z",
+            "modified": "2023-04-05T04:54:13.919Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "37b02ded-ca45-4883-8868-d55d1e02bec3",
+            "colId": "3156c202-5643-45b3-b4f1-788f2972c4b8",
+            "containerId": "",
+            "name": "EDIT Rent",
+            "url": "http://localhost:8000/api/rent/11",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-04-04T05:10:29.870Z",
+            "modified": "2023-04-16T10:35:11.483Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 1,\n  \"realestate_id\": 9,\n  \"booking_date\": \"2023-03-01\",\n  \"start_date\": \"2023-03-01\",\n  \"end_date\": \"2023-03-05\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ddefaae2-1005-4812-9bbc-c7215079327c",
+            "colId": "3156c202-5643-45b3-b4f1-788f2972c4b8",
+            "containerId": "",
+            "name": "EDIT Rent",
+            "url": "http://localhost:8000/api/rent/11",
+            "method": "PATCH",
+            "sortNum": 52500,
+            "created": "2023-04-04T13:08:56.901Z",
+            "modified": "2023-04-16T10:35:36.036Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 11,\n    \"booking_date\": \"2000-01-01\",\n  \"start_date\": \"2023-03-10\",\n  \"end_date\": \"2023-03-11\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2b970939-728a-488f-a491-56bec900b521",
+            "colId": "3156c202-5643-45b3-b4f1-788f2972c4b8",
+            "containerId": "",
+            "name": "DESTROY Rent",
+            "url": "http://localhost:8000/api/rent/11",
+            "method": "DELETE",
+            "sortNum": 55000,
+            "created": "2023-03-27T10:21:09.761Z",
+            "modified": "2023-04-16T10:35:23.191Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

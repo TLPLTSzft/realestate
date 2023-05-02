@@ -25,9 +25,9 @@ class SaleFactory extends Factory
 
         /*
         $sale_date = fake()->dateTimeBetween('-10 years', '-9 years');
-        // $rent_ids = Rent::all()->pluck('end_date', 'id')->where('realestate_id', '==', $realestate_id);
-        $rent_ids = Rent::all()->pluck('end_date', 'id');
-        foreach ($rent_ids as $key => $value) {
+        // $rental_ids = Rental::all()->pluck('end_date', 'id')->where('realestate_id', '==', $realestate_id);
+        $rental_ids = Rental::all()->pluck('end_date', 'id');
+        foreach ($rental_ids as $key => $value) {
             if (Carbon::createFromDate($sale_date) < Carbon::createFromDate($value)) {
                 // if ($value != null) {
                 $sale_date = fake()->dateTimeBetween('-5 years', '-4 years');

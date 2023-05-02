@@ -25,7 +25,7 @@ class StoreRealestateRequest extends FormRequest
             'realestate_code' => 'required|string|unique:realestates,realestate_code|size:7',
             'address' => 'required|string|max:100',
             'room' => 'required|decimal:(2,1)|between:0.5,6',
-            'furnishing' => 'required|integer|between:0,2',
+            'furnishing_id' => 'exists:furnishings,id',
             'rental_fee' => 'integer|between:150,1500|nullable',
             'sale_price' => 'integer|between:15,150|nullable',
             'description' => 'string|max:30|nullable',

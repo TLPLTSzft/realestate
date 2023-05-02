@@ -1,0 +1,138 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Realestate",
+    "dateExported": "2023-04-24T02:12:23.043Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e27f3c80-8a5d-4574-8198-584a339647ab",
+            "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
+            "containerId": "",
+            "name": "INDEX Realestate",
+            "url": "http://localhost:8000/api/realestates",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-04-23T19:05:42.822Z",
+            "modified": "2023-04-23T19:08:26.126Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e687a8da-9d74-4a83-9876-6981a68b695c",
+            "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
+            "containerId": "",
+            "name": "STORE Realestate",
+            "url": "http://localhost:8000/api/realestates",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2023-04-23T19:05:42.823Z",
+            "modified": "2023-04-24T02:11:30.925Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"realestate_code\": \"A18-581\",\n  \"address\": \"address\",\n  \"room\": \"5.0\",\n  \"furnishing_id\": 2,\n  \"rental_fee\": 500,\n  \"sale_price\": 100,\n  \"description\": \"description\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ce5dcf15-a18b-4306-b555-edffdda2ec8d",
+            "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
+            "containerId": "",
+            "name": "SHOW Realestate",
+            "url": "http://localhost:8000/api/realestates/10",
+            "method": "GET",
+            "sortNum": 45000,
+            "created": "2023-04-23T19:05:42.824Z",
+            "modified": "2023-04-24T00:17:22.228Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4393aa8d-a302-4c1c-8537-c0d7427ee62b",
+            "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
+            "containerId": "",
+            "name": "EDIT Realestate",
+            "url": "http://localhost:8000/api/realestates/10",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-04-23T19:05:42.825Z",
+            "modified": "2023-04-24T01:56:57.846Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"furnishing_id\": 0\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "13026a2b-f1e0-41d7-9e86-4c812b5994ce",
+            "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
+            "containerId": "",
+            "name": "EDIT Realestate",
+            "url": "http://localhost:8000/api/realestates/10",
+            "method": "PATCH",
+            "sortNum": 52500,
+            "created": "2023-04-23T19:05:42.826Z",
+            "modified": "2023-04-24T01:57:28.794Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"realestate_code\": \"BBB-001\",\n  \"furnishing_id\": 0\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ed92fd67-ac8b-4418-ab97-c2c7e96ac1e5",
+            "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
+            "containerId": "",
+            "name": "DESTROY Realestate",
+            "url": "http://localhost:8000/api/realestates/11",
+            "method": "DELETE",
+            "sortNum": 55000,
+            "created": "2023-04-23T19:05:42.827Z",
+            "modified": "2023-04-24T00:18:57.922Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

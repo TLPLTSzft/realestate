@@ -1,0 +1,138 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Sale",
+    "dateExported": "2023-04-05T19:18:23.907Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "71c3a95f-93a6-438d-8fe1-349c8fa5adf7",
+            "colId": "dea570c1-ce5b-44ca-802f-2b2fa03ba277",
+            "containerId": "",
+            "name": "Sale INDEX",
+            "url": "http://localhost:8000/api/sale",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-03-27T10:41:34.302Z",
+            "modified": "2023-03-27T10:41:52.940Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4cd5421e-25d0-47cf-af8c-7d60336573f9",
+            "colId": "dea570c1-ce5b-44ca-802f-2b2fa03ba277",
+            "containerId": "",
+            "name": "Sale STORE",
+            "url": "http://localhost:8000/api/sale",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2023-03-27T10:41:34.303Z",
+            "modified": "2023-04-05T19:17:25.751Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 11,\n  \"realestate_id\": 20,\n  \"sale_date\": \"2024-12-25\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b7c1062b-2aba-490e-9ed8-6ede9950cae6",
+            "colId": "dea570c1-ce5b-44ca-802f-2b2fa03ba277",
+            "containerId": "",
+            "name": "Sale SHOW",
+            "url": "http://localhost:8000/api/sale/11",
+            "method": "GET",
+            "sortNum": 45000,
+            "created": "2023-03-27T10:41:34.304Z",
+            "modified": "2023-04-05T19:15:08.960Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "30bcfce9-db90-45ae-b347-60708f11ff62",
+            "colId": "dea570c1-ce5b-44ca-802f-2b2fa03ba277",
+            "containerId": "",
+            "name": "Sale EDIT",
+            "url": "http://localhost:8000/api/sale/11",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-04-04T14:56:32.680Z",
+            "modified": "2023-04-05T19:17:53.954Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 1,\n  \"realestate_id\": 19,\n  \"sale_date\": \"2024-12-12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f404848c-1dea-4122-927b-b69d1390e434",
+            "colId": "dea570c1-ce5b-44ca-802f-2b2fa03ba277",
+            "containerId": "",
+            "name": "Sale EDIT",
+            "url": "http://localhost:8000/api/sale/11",
+            "method": "PATCH",
+            "sortNum": 52500,
+            "created": "2023-04-04T14:57:12.039Z",
+            "modified": "2023-04-05T19:18:08.506Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 1,\n  \"realestate_id\": \"16\",\n  \"sale_date\": \"2023-03-13\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c6a3f4cc-d872-4f70-8cc1-244d48c1c8d5",
+            "colId": "dea570c1-ce5b-44ca-802f-2b2fa03ba277",
+            "containerId": "",
+            "name": "Sale DESTROY",
+            "url": "http://localhost:8000/api/sale/11",
+            "method": "DELETE",
+            "sortNum": 55000,
+            "created": "2023-03-27T10:41:34.305Z",
+            "modified": "2023-04-05T19:15:18.990Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

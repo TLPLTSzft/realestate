@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Rent;
-use App\Http\Requests\StoreRentRequest;
-use App\Http\Requests\UpdateRentRequest;
+use App\Models\Rental;
+use App\Http\Requests\StoreRentalRequest;
+use App\Http\Requests\UpdateRentalRequest;
 
-class RentController extends Controller
+class RentalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class RentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRentRequest $request)
+    public function store(StoreRentalRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class RentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Rent $rent)
+    public function show(Rental $rental)
     {
         //
     }
@@ -43,7 +43,7 @@ class RentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Rent $rent)
+    public function edit(Rental $rental)
     {
         //
     }
@@ -51,7 +51,7 @@ class RentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRentRequest $request, Rent $rent)
+    public function update(UpdateRentalRequest $request, Rental $rental)
     {
         //
     }
@@ -59,7 +59,7 @@ class RentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Rent $rent)
+    public function destroy(Rental $rental)
     {
         //
     }

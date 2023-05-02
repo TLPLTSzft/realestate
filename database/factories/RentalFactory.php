@@ -8,9 +8,9 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Rent>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Rental>
  */
-class RentFactory extends Factory
+class RentalFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -21,7 +21,7 @@ class RentFactory extends Factory
     {
         $user_ids = User::all()->pluck('id');
         $realestate_ids = Realestate::all()->pluck('id');
-        $realestate_id = fake()->unique()->randomElement($realestate_ids);
+        $realestate_id = fake()->randomElement($realestate_ids);
         $booking_date = fake()->dateTimeBetween('-1 year');
         $seged = Carbon::createFromDate($booking_date)->addDay()->toDateString();
         $start_date = fake()->dateTimeInInterval($seged, '+1 year -1 day');

@@ -5,18 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Realestate extends Model
+class Rental extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'realestate_code',
-        'address',
-        'room',
-        'furnishing_id',
-        'rental_fee',
-        'sale_price',
-        'description',
+        'user_id',
+        'realestate_id',
+        'booking_date',
+        'start_date',
+        'end_date',
     ];
 
     protected $hidden = [

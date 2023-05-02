@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rents', function (Blueprint $table) {
+        Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->require;
             $table->foreignId('realestate_id')->unique()->constrained('realestates')->require;
-            // $table->unsignedBigInteger('realestate_id')->unique()->require;
-            // $table->foreign('realestate_id')->references('id')->on('realestates');
-            $table->date('booking_date')->require;
-            $table->date('start_date')->require;
-            $table->date('end_date')->nullable();
+            $table->date('sale_date')->require;
             $table->timestamps();
         });
     }
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rents');
+        Schema::dropIfExists('sales');
     }
 };
