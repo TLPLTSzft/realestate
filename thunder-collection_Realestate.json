@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Realestate",
-    "dateExported": "2023-04-24T02:12:23.043Z",
+    "dateExported": "2023-05-04T04:57:17.927Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -33,7 +33,7 @@
             "method": "POST",
             "sortNum": 35000,
             "created": "2023-04-23T19:05:42.823Z",
-            "modified": "2023-04-24T02:11:30.925Z",
+            "modified": "2023-05-02T22:28:12.828Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -43,7 +43,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"realestate_code\": \"A18-581\",\n  \"address\": \"address\",\n  \"room\": \"5.0\",\n  \"furnishing_id\": 2,\n  \"rental_fee\": 500,\n  \"sale_price\": 100,\n  \"description\": \"description\"\n}",
+                "raw": "{\n  \"realestate_code\": \"AAA-111\",\n  \"address\": \"Sample address\",\n  \"room\": \"2.0\",\n  \"furnishing_id\": 1,\n  \"rental_fee\": 150,\n  \"sale_price\": 100,\n  \"description\": \"Sample description\"\n}",
                 "form": []
             },
             "tests": []
@@ -53,11 +53,11 @@
             "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
             "containerId": "",
             "name": "SHOW Realestate",
-            "url": "http://localhost:8000/api/realestates/10",
+            "url": "http://localhost:8000/api/realestates/21",
             "method": "GET",
             "sortNum": 45000,
             "created": "2023-04-23T19:05:42.824Z",
-            "modified": "2023-04-24T00:17:22.228Z",
+            "modified": "2023-05-02T22:29:27.062Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -72,11 +72,11 @@
             "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
             "containerId": "",
             "name": "EDIT Realestate",
-            "url": "http://localhost:8000/api/realestates/10",
+            "url": "http://localhost:8000/api/realestates/21",
             "method": "PUT",
             "sortNum": 50000,
             "created": "2023-04-23T19:05:42.825Z",
-            "modified": "2023-04-24T01:56:57.846Z",
+            "modified": "2023-05-02T22:30:45.859Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -86,7 +86,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"furnishing_id\": 0\n}",
+                "raw": "{\n  \"furnishing_id\": 2\n}",
                 "form": []
             },
             "tests": []
@@ -96,11 +96,11 @@
             "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
             "containerId": "",
             "name": "EDIT Realestate",
-            "url": "http://localhost:8000/api/realestates/10",
+            "url": "http://localhost:8000/api/realestates/21",
             "method": "PATCH",
             "sortNum": 52500,
             "created": "2023-04-23T19:05:42.826Z",
-            "modified": "2023-04-24T01:57:28.794Z",
+            "modified": "2023-05-04T04:41:42.465Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -110,7 +110,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"realestate_code\": \"BBB-001\",\n  \"furnishing_id\": 0\n}",
+                "raw": "{\n  \"realestate_code\": \"BBB-001\",\n  \"furnishing_id\": 1\n}",
                 "form": []
             },
             "tests": []
@@ -120,11 +120,11 @@
             "colId": "ed2f3bb3-877e-42ac-864e-5c134f30d7ce",
             "containerId": "",
             "name": "DESTROY Realestate",
-            "url": "http://localhost:8000/api/realestates/11",
+            "url": "http://localhost:8000/api/realestates/21",
             "method": "DELETE",
             "sortNum": 55000,
             "created": "2023-04-23T19:05:42.827Z",
-            "modified": "2023-04-24T00:18:57.922Z",
+            "modified": "2023-05-04T04:55:56.719Z",
             "headers": [
                 {
                     "name": "Accept",
